@@ -1,0 +1,28 @@
+gender:
+1 = Male
+2 = Female
+
+
+race:
+1 = African-American of Black
+2 = Asian
+3 = Hispanic
+4 = Pacific Islander
+5 = Multiracial
+6 = Native American
+7 = White/Caucasian
+8 = Other
+9 = Prefer not to answer
+
+
+educ:
+1 = High school (or equivalency)
+2 = Some college
+3 = Associate's degree (2-year)
+4 = Bachelor's degree
+5 = Master's degree
+6 = Professional degree (e.g., M.D., J.D.)
+7 = Doctorate (e.g., Ph.D.)
+
+
+

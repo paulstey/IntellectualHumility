@@ -1,0 +1,1501 @@
+Mplus VERSION 7 (Mac)
+MUTHEN & MUTHEN
+12/11/2016  12:15 PM
+
+INPUT INSTRUCTIONS
+
+
+  TITLE: IH CFA
+
+  DATA: FILE IS "/Users/kathryniurino/Dropbox
+  /Documents/Intellectual Humility/
+  IH scale construction/
+  Study 4 Convergent validity/
+  IHdata_forMplus2.csv";
+
+  VARIABLE: NAMES ARE IH01-IH23
+  GRIT01-GRIT08
+  BIDR01-BIDR40
+  BSIX01-BSIX24
+  NAR01-NAR09
+  OCQHF01-OCQHF15
+  OCQART01-OCQART15
+  OCQLANG01-OCQLANG15
+  OCQBKS01-OCQBKS15
+  OCQAUTH01-OCQAUTH15
+  OCQSSCI01-OCQSSCI15
+  OCQPSCI01-OCQPSCI15
+  OCQLSCI01-OCQLSCI15
+  OCQCMES01-OCQCMES15
+  OCQPHIL01-OCQPHIL15
+  SE01-SE10
+  gender age race
+  sat act phil_cls psyc_cls
+  educ;
+
+  USEVARIABLES ARE IH01-IH23;
+
+  MISSING ARE ALL (999);
+
+  ANALYSIS:
+  TYPE=GENERAL;
+  ESTIMATOR=MLR;
+
+  MODEL:
+  MODESTY BY IH02* IH01 IH03-IH06;
+  VANITY BY IH08* IH07 IH09-IH12;
+  RESILIENCE BY IH21* IH19 IH20 IH22 IH23;
+  BOREDOM BY IH13* IH14-IH18;
+  MODESTY-BOREDOM@1;
+
+  OUTPUT: STDYX tech4 modindices(20) RESIDUAL;
+
+
+
+
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG01
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG02
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG03
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG04
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG05
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG06
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG07
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG08
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG09
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG10
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG11
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG12
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG13
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG14
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLANG15
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH01
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH02
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH03
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH04
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH05
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH06
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH07
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH08
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH09
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH10
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH11
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH12
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH13
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH14
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQAUTH15
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI01
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI02
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI03
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI04
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI05
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI06
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI07
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI08
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI09
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI10
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI11
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI12
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI13
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI14
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQSSCI15
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI01
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI02
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI03
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI04
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI05
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI06
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI07
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI08
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI09
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI10
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI11
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI12
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI13
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI14
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPSCI15
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI01
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI02
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI03
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI04
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI05
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI06
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI07
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI08
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI09
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI10
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI11
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI12
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI13
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI14
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQLSCI15
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES01
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES02
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES03
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES04
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES05
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES06
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES07
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES08
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES09
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES10
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES11
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES12
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES13
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES14
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQCMES15
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL01
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL02
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL03
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL04
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL05
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL06
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL07
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL08
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL09
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL10
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL11
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL12
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL13
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL14
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: OCQPHIL15
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: RESILIENCE
+ 106 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+IH CFA
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         980
+
+Number of dependent variables                                   23
+Number of independent variables                                  0
+Number of continuous latent variables                            4
+
+Observed dependent variables
+
+  Continuous
+   IH01        IH02        IH03        IH04        IH05        IH06
+   IH07        IH08        IH09        IH10        IH11        IH12
+   IH13        IH14        IH15        IH16        IH17        IH18
+   IH19        IH20        IH21        IH22        IH23
+
+Continuous latent variables
+   MODESTY     VANITY      RESILIEN    BOREDOM
+
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  /Users/kathryniurino/Dropbox/Documents/Intellectual Humility/IH scale construc
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns            20
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              IH01          IH02          IH03          IH04          IH05
+              ________      ________      ________      ________      ________
+ IH01           0.999
+ IH02           0.999         1.000
+ IH03           0.994         0.995         0.995
+ IH04           0.995         0.996         0.991         0.996
+ IH05           0.995         0.996         0.991         0.993         0.996
+ IH06           0.996         0.997         0.992         0.993         0.993
+ IH07           0.998         0.999         0.994         0.995         0.995
+ IH08           0.997         0.998         0.993         0.994         0.994
+ IH09           0.996         0.997         0.992         0.993         0.993
+ IH10           0.999         1.000         0.995         0.996         0.996
+ IH11           0.998         0.999         0.994         0.996         0.996
+ IH12           0.995         0.996         0.991         0.993         0.993
+ IH13           0.997         0.998         0.993         0.995         0.995
+ IH14           0.997         0.998         0.993         0.994         0.994
+ IH15           0.998         0.999         0.994         0.995         0.995
+ IH16           0.996         0.997         0.992         0.994         0.994
+ IH17           0.996         0.997         0.992         0.994         0.994
+ IH18           0.994         0.995         0.990         0.991         0.991
+ IH19           0.997         0.998         0.993         0.994         0.994
+ IH20           0.998         0.999         0.994         0.995         0.995
+ IH21           0.996         0.997         0.992         0.993         0.993
+ IH22           0.997         0.998         0.993         0.994         0.994
+ IH23           0.998         0.999         0.994         0.995         0.995
+
+
+           Covariance Coverage
+              IH06          IH07          IH08          IH09          IH10
+              ________      ________      ________      ________      ________
+ IH06           0.997
+ IH07           0.996         0.999
+ IH08           0.995         0.998         0.998
+ IH09           0.995         0.996         0.995         0.997
+ IH10           0.997         0.999         0.998         0.997         1.000
+ IH11           0.996         0.998         0.997         0.996         0.999
+ IH12           0.993         0.995         0.994         0.993         0.996
+ IH13           0.995         0.997         0.996         0.995         0.998
+ IH14           0.996         0.998         0.997         0.996         0.998
+ IH15           0.997         0.998         0.997         0.997         0.999
+ IH16           0.994         0.996         0.995         0.994         0.997
+ IH17           0.995         0.996         0.995         0.995         0.997
+ IH18           0.992         0.995         0.994         0.992         0.995
+ IH19           0.996         0.997         0.996         0.996         0.998
+ IH20           0.996         0.999         0.998         0.996         0.999
+ IH21           0.994         0.996         0.995         0.994         0.997
+ IH22           0.995         0.998         0.997         0.995         0.998
+ IH23           0.996         0.998         0.997         0.996         0.999
+
+
+           Covariance Coverage
+              IH11          IH12          IH13          IH14          IH15
+              ________      ________      ________      ________      ________
+ IH11           0.999
+ IH12           0.996         0.996
+ IH13           0.998         0.995         0.998
+ IH14           0.997         0.994         0.996         0.998
+ IH15           0.998         0.995         0.997         0.998         0.999
+ IH16           0.997         0.994         0.996         0.995         0.996
+ IH17           0.997         0.994         0.996         0.996         0.997
+ IH18           0.994         0.991         0.993         0.994         0.994
+ IH19           0.997         0.994         0.996         0.997         0.998
+ IH20           0.998         0.995         0.997         0.998         0.998
+ IH21           0.996         0.993         0.995         0.995         0.996
+ IH22           0.997         0.994         0.996         0.997         0.997
+ IH23           0.998         0.995         0.997         0.997         0.998
+
+
+           Covariance Coverage
+              IH16          IH17          IH18          IH19          IH20
+              ________      ________      ________      ________      ________
+ IH16           0.997
+ IH17           0.995         0.997
+ IH18           0.992         0.992         0.995
+ IH19           0.995         0.996         0.993         0.998
+ IH20           0.996         0.996         0.995         0.997         0.999
+ IH21           0.994         0.994         0.992         0.995         0.996
+ IH22           0.995         0.995         0.994         0.996         0.998
+ IH23           0.996         0.996         0.994         0.997         0.998
+
+
+           Covariance Coverage
+              IH21          IH22          IH23
+              ________      ________      ________
+ IH21           0.997
+ IH22           0.995         0.998
+ IH23           0.996         0.997         0.999
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       75
+
+Loglikelihood
+
+          H0 Value                      -36805.608
+          H0 Scaling Correction Factor      1.3385
+            for MLR
+          H1 Value                      -36120.825
+          H1 Scaling Correction Factor      1.3156
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                   73761.217
+          Bayesian (BIC)                 74127.783
+          Sample-Size Adjusted BIC       73889.582
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                           1047.093*
+          Degrees of Freedom                   224
+          P-Value                           0.0000
+          Scaling Correction Factor         1.3080
+            for MLR
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.061
+          90 Percent C.I.                    0.058  0.065
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.873
+          TLI                                0.856
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           6711.700
+          Degrees of Freedom                   253
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.060
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MODESTY  BY
+    IH02               0.791      0.050     15.724      0.000
+    IH01              -0.997      0.049    -20.335      0.000
+    IH03              -0.940      0.048    -19.563      0.000
+    IH04               0.893      0.046     19.406      0.000
+    IH05              -0.686      0.046    -15.011      0.000
+    IH06               0.746      0.047     15.899      0.000
+
+ VANITY   BY
+    IH08               0.926      0.050     18.534      0.000
+    IH07              -1.099      0.053    -20.577      0.000
+    IH09               1.266      0.043     29.557      0.000
+    IH10              -0.737      0.064    -11.478      0.000
+    IH11               1.171      0.045     25.879      0.000
+    IH12               1.260      0.046     27.687      0.000
+
+ RESILIEN BY
+    IH21              -1.002      0.050    -20.003      0.000
+    IH19               1.266      0.046     27.377      0.000
+    IH20               1.210      0.042     29.032      0.000
+    IH22              -0.953      0.056    -17.069      0.000
+    IH23               1.136      0.046     24.786      0.000
+
+ BOREDOM  BY
+    IH13               0.958      0.048     19.770      0.000
+    IH14              -0.645      0.048    -13.308      0.000
+    IH15               1.032      0.050     20.665      0.000
+    IH16               0.930      0.046     20.216      0.000
+    IH17               0.966      0.043     22.344      0.000
+    IH18               0.865      0.053     16.187      0.000
+
+ VANITY   WITH
+    MODESTY           -0.261      0.038     -6.906      0.000
+
+ RESILIEN WITH
+    MODESTY           -0.726      0.026    -27.450      0.000
+    VANITY             0.465      0.036     12.953      0.000
+
+ BOREDOM  WITH
+    MODESTY           -0.838      0.029    -29.309      0.000
+    VANITY             0.156      0.044      3.515      0.000
+    RESILIENCE         0.688      0.030     22.882      0.000
+
+ Intercepts
+    IH01               2.494      0.044     56.171      0.000
+    IH02               5.902      0.039    150.930      0.000
+    IH03               2.414      0.045     53.846      0.000
+    IH04               5.686      0.041    140.289      0.000
+    IH05               1.743      0.034     50.844      0.000
+    IH06               5.774      0.039    148.617      0.000
+    IH07               4.250      0.054     79.011      0.000
+    IH08               4.264      0.049     86.999      0.000
+    IH09               4.123      0.052     79.662      0.000
+    IH10               4.613      0.054     86.174      0.000
+    IH11               3.965      0.051     77.297      0.000
+    IH12               4.024      0.052     77.259      0.000
+    IH13               3.107      0.049     63.178      0.000
+    IH14               5.488      0.044    124.717      0.000
+    IH15               3.255      0.052     62.869      0.000
+    IH16               3.140      0.048     65.685      0.000
+    IH17               2.695      0.046     58.284      0.000
+    IH18               2.718      0.050     53.984      0.000
+    IH19               3.518      0.054     65.236      0.000
+    IH20               2.770      0.048     57.546      0.000
+    IH21               4.773      0.048     99.322      0.000
+    IH22               4.228      0.054     78.939      0.000
+    IH23               2.683      0.049     55.164      0.000
+
+ Variances
+    MODESTY            1.000      0.000    999.000    999.000
+    VANITY             1.000      0.000    999.000    999.000
+    RESILIENCE         1.000      0.000    999.000    999.000
+    BOREDOM            1.000      0.000    999.000    999.000
+
+ Residual Variances
+    IH01               0.939      0.084     11.241      0.000
+    IH02               0.873      0.099      8.856      0.000
+    IH03               1.077      0.094     11.435      0.000
+    IH04               0.805      0.073     11.042      0.000
+    IH05               0.668      0.056     11.861      0.000
+    IH06               0.920      0.102      9.056      0.000
+    IH07               1.627      0.102     15.963      0.000
+    IH08               1.494      0.082     18.266      0.000
+    IH09               1.020      0.078     13.042      0.000
+    IH10               2.265      0.126     17.957      0.000
+    IH11               1.205      0.080     15.080      0.000
+    IH12               1.065      0.089     12.020      0.000
+    IH13               1.448      0.095     15.302      0.000
+    IH14               1.478      0.093     15.843      0.000
+    IH15               1.560      0.097     16.121      0.000
+    IH16               1.370      0.083     16.558      0.000
+    IH17               1.158      0.091     12.765      0.000
+    IH18               1.726      0.106     16.335      0.000
+    IH19               1.245      0.095     13.084      0.000
+    IH20               0.803      0.069     11.722      0.000
+    IH21               1.253      0.085     14.819      0.000
+    IH22               1.899      0.100     18.987      0.000
+    IH23               1.029      0.072     14.372      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MODESTY  BY
+    IH02               0.646      0.037     17.329      0.000
+    IH01              -0.717      0.027    -26.559      0.000
+    IH03              -0.671      0.030    -22.698      0.000
+    IH04               0.705      0.027     25.789      0.000
+    IH05              -0.643      0.030    -21.720      0.000
+    IH06               0.614      0.038     16.268      0.000
+
+ VANITY   BY
+    IH08               0.604      0.027     22.257      0.000
+    IH07              -0.653      0.027    -23.787      0.000
+    IH09               0.782      0.019     40.682      0.000
+    IH10              -0.440      0.038    -11.634      0.000
+    IH11               0.730      0.022     33.885      0.000
+    IH12               0.774      0.022     35.886      0.000
+
+ RESILIEN BY
+    IH21              -0.667      0.027    -24.921      0.000
+    IH19               0.750      0.022     33.492      0.000
+    IH20               0.804      0.018     44.114      0.000
+    IH22              -0.569      0.030    -18.973      0.000
+    IH23               0.746      0.020     36.445      0.000
+
+ BOREDOM  BY
+    IH13               0.623      0.028     22.354      0.000
+    IH14              -0.469      0.031    -14.956      0.000
+    IH15               0.637      0.027     23.959      0.000
+    IH16               0.622      0.026     23.511      0.000
+    IH17               0.668      0.026     25.775      0.000
+    IH18               0.550      0.031     17.778      0.000
+
+ VANITY   WITH
+    MODESTY           -0.261      0.038     -6.906      0.000
+
+ RESILIEN WITH
+    MODESTY           -0.726      0.026    -27.450      0.000
+    VANITY             0.465      0.036     12.953      0.000
+
+ BOREDOM  WITH
+    MODESTY           -0.838      0.029    -29.309      0.000
+    VANITY             0.156      0.044      3.515      0.000
+    RESILIENCE         0.688      0.030     22.882      0.000
+
+ Intercepts
+    IH01               1.794      0.036     50.259      0.000
+    IH02               4.821      0.189     25.553      0.000
+    IH03               1.724      0.032     54.498      0.000
+    IH04               4.491      0.155     28.974      0.000
+    IH05               1.633      0.041     40.187      0.000
+    IH06               4.752      0.181     26.235      0.000
+    IH07               2.525      0.054     47.039      0.000
+    IH08               2.781      0.069     40.409      0.000
+    IH09               2.546      0.062     41.091      0.000
+    IH10               2.753      0.068     40.656      0.000
+    IH11               2.470      0.055     44.553      0.000
+    IH12               2.470      0.056     43.928      0.000
+    IH13               2.020      0.038     53.027      0.000
+    IH14               3.988      0.132     30.254      0.000
+    IH15               2.009      0.038     52.468      0.000
+    IH16               2.101      0.041     50.945      0.000
+    IH17               1.864      0.035     53.920      0.000
+    IH18               1.728      0.030     57.619      0.000
+    IH19               2.085      0.041     50.523      0.000
+    IH20               1.839      0.033     54.934      0.000
+    IH21               3.176      0.086     37.016      0.000
+    IH22               2.523      0.054     46.631      0.000
+    IH23               1.762      0.032     54.949      0.000
+
+ Variances
+    MODESTY            1.000      0.000    999.000    999.000
+    VANITY             1.000      0.000    999.000    999.000
+    RESILIENCE         1.000      0.000    999.000    999.000
+    BOREDOM            1.000      0.000    999.000    999.000
+
+ Residual Variances
+    IH01               0.486      0.039     12.557      0.000
+    IH02               0.583      0.048     12.107      0.000
+    IH03               0.549      0.040     13.835      0.000
+    IH04               0.503      0.039     13.031      0.000
+    IH05               0.586      0.038     15.388      0.000
+    IH06               0.623      0.046     13.448      0.000
+    IH07               0.574      0.036     16.023      0.000
+    IH08               0.635      0.033     19.389      0.000
+    IH09               0.389      0.030     12.942      0.000
+    IH10               0.807      0.033     24.252      0.000
+    IH11               0.468      0.031     14.882      0.000
+    IH12               0.401      0.033     12.036      0.000
+    IH13               0.612      0.035     17.636      0.000
+    IH14               0.780      0.029     26.536      0.000
+    IH15               0.594      0.034     17.555      0.000
+    IH16               0.613      0.033     18.642      0.000
+    IH17               0.554      0.035     16.000      0.000
+    IH18               0.698      0.034     20.515      0.000
+    IH19               0.437      0.034     13.007      0.000
+    IH20               0.354      0.029     12.089      0.000
+    IH21               0.555      0.036     15.547      0.000
+    IH22               0.676      0.034     19.832      0.000
+    IH23               0.444      0.031     14.544      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    IH01               0.514      0.039     13.280      0.000
+    IH02               0.417      0.048      8.664      0.000
+    IH03               0.451      0.040     11.349      0.000
+    IH04               0.497      0.039     12.895      0.000
+    IH05               0.414      0.038     10.860      0.000
+    IH06               0.377      0.046      8.134      0.000
+    IH07               0.426      0.036     11.894      0.000
+    IH08               0.365      0.033     11.129      0.000
+    IH09               0.611      0.030     20.341      0.000
+    IH10               0.193      0.033      5.817      0.000
+    IH11               0.532      0.031     16.943      0.000
+    IH12               0.599      0.033     17.943      0.000
+    IH13               0.388      0.035     11.177      0.000
+    IH14               0.220      0.029      7.478      0.000
+    IH15               0.406      0.034     11.980      0.000
+    IH16               0.387      0.033     11.755      0.000
+    IH17               0.446      0.035     12.888      0.000
+    IH18               0.302      0.034      8.889      0.000
+    IH19               0.563      0.034     16.746      0.000
+    IH20               0.646      0.029     22.057      0.000
+    IH21               0.445      0.036     12.461      0.000
+    IH22               0.324      0.034      9.487      0.000
+    IH23               0.556      0.031     18.222      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.112E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+RESIDUAL OUTPUT
+
+
+     ESTIMATED MODEL AND RESIDUALS (OBSERVED - ESTIMATED)
+
+
+           Model Estimated Means/Intercepts/Thresholds
+              IH01          IH02          IH03          IH04          IH05
+              ________      ________      ________      ________      ________
+      1         2.494         5.902         2.414         5.686         1.743
+
+
+           Model Estimated Means/Intercepts/Thresholds
+              IH06          IH07          IH08          IH09          IH10
+              ________      ________      ________      ________      ________
+      1         5.774         4.250         4.264         4.123         4.613
+
+
+           Model Estimated Means/Intercepts/Thresholds
+              IH11          IH12          IH13          IH14          IH15
+              ________      ________      ________      ________      ________
+      1         3.965         4.024         3.107         5.488         3.255
+
+
+           Model Estimated Means/Intercepts/Thresholds
+              IH16          IH17          IH18          IH19          IH20
+              ________      ________      ________      ________      ________
+      1         3.140         2.695         2.718         3.518         2.770
+
+
+           Model Estimated Means/Intercepts/Thresholds
+              IH21          IH22          IH23
+              ________      ________      ________
+      1         4.773         4.228         2.683
+
+
+           Residuals for Means/Intercepts/Thresholds
+              IH01          IH02          IH03          IH04          IH05
+              ________      ________      ________      ________      ________
+      1         0.000         0.000         0.000         0.000         0.001
+
+
+           Residuals for Means/Intercepts/Thresholds
+              IH06          IH07          IH08          IH09          IH10
+              ________      ________      ________      ________      ________
+      1         0.001         0.001         0.000         0.000         0.000
+
+
+           Residuals for Means/Intercepts/Thresholds
+              IH11          IH12          IH13          IH14          IH15
+              ________      ________      ________      ________      ________
+      1         0.000         0.000         0.001         0.001         0.000
+
+
+           Residuals for Means/Intercepts/Thresholds
+              IH16          IH17          IH18          IH19          IH20
+              ________      ________      ________      ________      ________
+      1         0.000         0.000         0.000        -0.001         0.000
+
+
+           Residuals for Means/Intercepts/Thresholds
+              IH21          IH22          IH23
+              ________      ________      ________
+      1        -0.002         0.000         0.000
+
+
+           Standardized Residuals (z-scores) for Means/Intercepts/Thresholds
+              IH01          IH02          IH03          IH04          IH05
+              ________      ________      ________      ________      ________
+      1        -0.196         0.000         0.066       999.000         0.572
+
+
+           Standardized Residuals (z-scores) for Means/Intercepts/Thresholds
+              IH06          IH07          IH08          IH09          IH10
+              ________      ________      ________      ________      ________
+      1       999.000         0.999       999.000       999.000         0.000
+
+
+           Standardized Residuals (z-scores) for Means/Intercepts/Thresholds
+              IH11          IH12          IH13          IH14          IH15
+              ________      ________      ________      ________      ________
+      1       999.000       999.000         0.465         0.557         1.108
+
+
+           Standardized Residuals (z-scores) for Means/Intercepts/Thresholds
+              IH16          IH17          IH18          IH19          IH20
+              ________      ________      ________      ________      ________
+      1       999.000        -0.112       999.000       999.000       999.000
+
+
+           Standardized Residuals (z-scores) for Means/Intercepts/Thresholds
+              IH21          IH22          IH23
+              ________      ________      ________
+      1        -0.750       999.000        -0.129
+
+
+           Normalized Residuals for Means/Intercepts/Thresholds
+              IH01          IH02          IH03          IH04          IH05
+              ________      ________      ________      ________      ________
+      1        -0.003         0.000         0.002         0.003         0.035
+
+
+           Normalized Residuals for Means/Intercepts/Thresholds
+              IH06          IH07          IH08          IH09          IH10
+              ________      ________      ________      ________      ________
+      1         0.022         0.011         0.004         0.003         0.000
+
+
+           Normalized Residuals for Means/Intercepts/Thresholds
+              IH11          IH12          IH13          IH14          IH15
+              ________      ________      ________      ________      ________
+      1         0.004        -0.007         0.011         0.013         0.005
+
+
+           Normalized Residuals for Means/Intercepts/Thresholds
+              IH16          IH17          IH18          IH19          IH20
+              ________      ________      ________      ________      ________
+      1        -0.004        -0.002         0.008        -0.016         0.001
+
+
+           Normalized Residuals for Means/Intercepts/Thresholds
+              IH21          IH22          IH23
+              ________      ________      ________
+      1        -0.044         0.006        -0.003
+
+
+           Model Estimated Covariances/Correlations/Residual Correlations
+              IH01          IH02          IH03          IH04          IH05
+              ________      ________      ________      ________      ________
+ IH01           1.933
+ IH02          -0.788         1.499
+ IH03           0.937        -0.743         1.961
+ IH04          -0.890         0.706        -0.839         1.602
+ IH05           0.684        -0.543         0.645        -0.613         1.139
+ IH06          -0.743         0.590        -0.701         0.666        -0.512
+ IH07          -0.286         0.227        -0.269         0.256        -0.197
+ IH08           0.241        -0.191         0.227        -0.216         0.166
+ IH09           0.329        -0.261         0.310        -0.295         0.227
+ IH10          -0.192         0.152        -0.181         0.172        -0.132
+ IH11           0.304        -0.241         0.287        -0.273         0.210
+ IH12           0.328        -0.260         0.309        -0.293         0.226
+ IH13           0.800        -0.635         0.754        -0.716         0.551
+ IH14          -0.539         0.427        -0.508         0.483        -0.371
+ IH15           0.861        -0.683         0.812        -0.772         0.593
+ IH16           0.776        -0.616         0.732        -0.695         0.534
+ IH17           0.806        -0.640         0.760        -0.722         0.555
+ IH18           0.722        -0.573         0.681        -0.647         0.497
+ IH19           0.916        -0.727         0.864        -0.821         0.631
+ IH20           0.876        -0.695         0.826        -0.785         0.603
+ IH21          -0.725         0.575        -0.684         0.650        -0.500
+ IH22          -0.690         0.547        -0.651         0.618        -0.475
+ IH23           0.822        -0.652         0.775        -0.736         0.566
+
+
+           Model Estimated Covariances/Correlations/Residual Correlations
+              IH06          IH07          IH08          IH09          IH10
+              ________      ________      ________      ________      ________
+ IH06           1.476
+ IH07           0.214         2.834
+ IH08          -0.180        -1.018         2.351
+ IH09          -0.246        -1.391         1.172         2.623
+ IH10           0.143         0.810        -0.683        -0.933         2.809
+ IH11          -0.228        -1.287         1.085         1.483        -0.863
+ IH12          -0.245        -1.385         1.167         1.596        -0.929
+ IH13          -0.599        -0.164         0.139         0.190        -0.110
+ IH14           0.403         0.111        -0.093        -0.128         0.074
+ IH15          -0.645        -0.177         0.149         0.204        -0.119
+ IH16          -0.581        -0.160         0.134         0.184        -0.107
+ IH17          -0.603        -0.166         0.140         0.191        -0.111
+ IH18          -0.540        -0.148         0.125         0.171        -0.100
+ IH19          -0.686        -0.648         0.546         0.746        -0.434
+ IH20          -0.656        -0.619         0.522         0.713        -0.415
+ IH21           0.543         0.513        -0.432        -0.591         0.344
+ IH22           0.516         0.488        -0.411        -0.562         0.327
+ IH23          -0.615        -0.581         0.489         0.669        -0.390
+
+
+           Model Estimated Covariances/Correlations/Residual Correlations
+              IH11          IH12          IH13          IH14          IH15
+              ________      ________      ________      ________      ________
+ IH11           2.577
+ IH12           1.476         2.654
+ IH13           0.175         0.189         2.366
+ IH14          -0.118        -0.127        -0.618         1.894
+ IH15           0.189         0.203         0.989        -0.666         2.625
+ IH16           0.170         0.183         0.891        -0.600         0.959
+ IH17           0.177         0.190         0.925        -0.623         0.996
+ IH18           0.158         0.170         0.829        -0.558         0.892
+ IH19           0.690         0.743         0.834        -0.562         0.898
+ IH20           0.660         0.710         0.798        -0.537         0.859
+ IH21          -0.546        -0.588        -0.660         0.445        -0.711
+ IH22          -0.520        -0.559        -0.628         0.423        -0.676
+ IH23           0.619         0.666         0.748        -0.504         0.806
+
+
+           Model Estimated Covariances/Correlations/Residual Correlations
+              IH16          IH17          IH18          IH19          IH20
+              ________      ________      ________      ________      ________
+ IH16           2.234
+ IH17           0.898         2.090
+ IH18           0.804         0.835         2.474
+ IH19           0.809         0.841         0.753         2.848
+ IH20           0.774         0.804         0.720         1.532         2.268
+ IH21          -0.641        -0.666        -0.596        -1.269        -1.213
+ IH22          -0.609        -0.633        -0.567        -1.207        -1.154
+ IH23           0.726         0.754         0.675         1.438         1.375
+
+
+           Model Estimated Covariances/Correlations/Residual Correlations
+              IH21          IH22          IH23
+              ________      ________      ________
+ IH21           2.257
+ IH22           0.955         2.808
+ IH23          -1.138        -1.082         2.319
+
+
+           Residuals for Covariances/Correlations/Residual Correlations
+              IH01          IH02          IH03          IH04          IH05
+              ________      ________      ________      ________      ________
+ IH01           0.000
+ IH02           0.193         0.000
+ IH03           0.202         0.145         0.000
+ IH04           0.067         0.138         0.053         0.000
+ IH05          -0.024        -0.028        -0.025        -0.038         0.002
+ IH06           0.137         0.307         0.144         0.074        -0.029
+ IH07          -0.027         0.204        -0.087         0.161         0.016
+ IH08          -0.135         0.136        -0.099         0.191        -0.100
+ IH09           0.182         0.081         0.173         0.077        -0.018
+ IH10          -0.117         0.309        -0.171         0.320        -0.098
+ IH11           0.149         0.017         0.088         0.017         0.046
+ IH12           0.091         0.116         0.087         0.103         0.008
+ IH13           0.057         0.129         0.020         0.157         0.009
+ IH14          -0.053         0.087        -0.121         0.100        -0.030
+ IH15           0.272         0.226         0.199         0.143        -0.154
+ IH16           0.201         0.183         0.064         0.065        -0.024
+ IH17           0.078         0.060         0.034         0.102         0.008
+ IH18           0.186         0.021         0.155         0.045         0.139
+ IH19          -0.015         0.138        -0.009         0.145        -0.127
+ IH20           0.086        -0.070         0.054        -0.018         0.056
+ IH21          -0.001         0.232         0.042         0.142         0.044
+ IH22           0.266         0.019         0.225         0.026         0.305
+ IH23           0.047        -0.130        -0.022        -0.066         0.073
+
+
+           Residuals for Covariances/Correlations/Residual Correlations
+              IH06          IH07          IH08          IH09          IH10
+              ________      ________      ________      ________      ________
+ IH06           0.000
+ IH07           0.051         0.000
+ IH08           0.307         0.137         0.000
+ IH09           0.258         0.060         0.071         0.000
+ IH10           0.272         0.428         0.111         0.093         0.000
+ IH11           0.140        -0.018         0.036         0.008         0.090
+ IH12           0.207         0.067         0.042         0.030         0.078
+ IH13           0.069         0.287        -0.168         0.035         0.199
+ IH14           0.105        -0.044         0.263         0.129         0.233
+ IH15           0.185         0.064        -0.048         0.166        -0.127
+ IH16           0.128         0.217        -0.262        -0.067         0.011
+ IH17          -0.043         0.205        -0.247        -0.014        -0.004
+ IH18           0.052        -0.244         0.255         0.429        -0.370
+ IH19           0.201        -0.117        -0.055         0.120        -0.227
+ IH20          -0.007        -0.025        -0.123        -0.043        -0.065
+ IH21           0.050         0.084         0.301         0.164         0.261
+ IH22          -0.130         0.275         0.216         0.125         0.158
+ IH23          -0.027        -0.145        -0.014         0.106        -0.099
+
+
+           Residuals for Covariances/Correlations/Residual Correlations
+              IH11          IH12          IH13          IH14          IH15
+              ________      ________      ________      ________      ________
+ IH11           0.000
+ IH12           0.015         0.001
+ IH13          -0.074        -0.104         0.000
+ IH14           0.158         0.107         0.074         0.000
+ IH15           0.102         0.203        -0.078        -0.087         0.000
+ IH16          -0.066        -0.022         0.062         0.003         0.108
+ IH17          -0.075         0.024         0.122         0.023         0.032
+ IH18           0.357         0.356        -0.022         0.183         0.011
+ IH19          -0.013         0.121        -0.055         0.166         0.065
+ IH20          -0.041        -0.003         0.036         0.068        -0.011
+ IH21           0.196         0.097         0.076        -0.002        -0.063
+ IH22           0.138         0.159         0.193        -0.071         0.161
+ IH23          -0.010         0.115         0.163         0.147        -0.029
+
+
+           Residuals for Covariances/Correlations/Residual Correlations
+              IH16          IH17          IH18          IH19          IH20
+              ________      ________      ________      ________      ________
+ IH16          -0.002
+ IH17          -0.063         0.000
+ IH18          -0.103        -0.027         0.000
+ IH19           0.014        -0.103         0.227        -0.002
+ IH20          -0.051        -0.014         0.252        -0.022         0.000
+ IH21          -0.170         0.145        -0.098        -0.143         0.052
+ IH22           0.168         0.373         0.050        -0.143         0.061
+ IH23          -0.032         0.063         0.370        -0.083         0.047
+
+
+           Residuals for Covariances/Correlations/Residual Correlations
+              IH21          IH22          IH23
+              ________      ________      ________
+ IH21           0.007
+ IH22           0.299        -0.001
+ IH23           0.179        -0.027         0.000
+
+
+           Standardized Residuals (z-scores) for Covariances/Correlations/Residual Corr
+              IH01          IH02          IH03          IH04          IH05
+              ________      ________      ________      ________      ________
+ IH01         999.000
+ IH02           6.312         0.000
+ IH03         999.000         3.668         0.295
+ IH04           1.954         8.736         1.531       999.000
+ IH05          -0.744        -1.793        -0.996        -1.642         0.371
+ IH06           3.749        10.969         4.025        10.173        -1.316
+ IH07          -0.453         3.344        -1.372         2.736         0.402
+ IH08          -2.156         2.409        -1.534         3.318        -2.649
+ IH09           3.507         1.494         3.238         1.437        -0.489
+ IH10          -1.664         4.735        -2.356         5.031        -2.018
+ IH11           2.702         0.333         1.578         0.329         1.154
+ IH12           1.609         2.088         1.436         1.840         0.187
+ IH13           1.551         2.891         0.515         3.708         0.286
+ IH14          -1.254         1.853        -2.692         2.488        -0.862
+ IH15           9.550         4.594         6.771         3.166        -4.495
+ IH16           7.918         3.960         1.610         1.700        -0.780
+ IH17           3.209         1.492         0.958         2.504         0.269
+ IH18           4.438         0.428         3.718         1.079         3.782
+ IH19          -0.341         3.320        -0.224         2.830        -4.110
+ IH20           1.937        -2.007         1.349        -0.486         1.481
+ IH21          -0.020         5.327         0.868         3.079         1.231
+ IH22           4.402         0.386         4.132         0.517         8.168
+ IH23           1.097        -3.527        -0.576        -1.590         2.195
+
+
+           Standardized Residuals (z-scores) for Covariances/Correlations/Residual Corr
+              IH06          IH07          IH08          IH09          IH10
+              ________      ________      ________      ________      ________
+ IH06         999.000
+ IH07           0.795         0.227
+ IH08           5.317         2.556        -0.066
+ IH09           4.200         1.431         2.822       999.000
+ IH10           4.063        13.591         1.758         2.031         0.036
+ IH11           2.364        -0.476         0.936         0.247         1.792
+ IH12           3.686         1.616         1.517         3.039         1.785
+ IH13           1.533         3.782        -2.222         0.520         2.359
+ IH14           2.386        -0.586         3.829         1.896         3.080
+ IH15           3.734         0.803        -0.637         2.322        -1.438
+ IH16           2.939         2.865        -3.585        -0.961         0.139
+ IH17          -1.035         2.856        -3.703        -0.224        -0.050
+ IH18           1.194        -3.063         3.508         6.261        -4.332
+ IH19           4.699        -1.630        -0.761         1.934        -2.797
+ IH20          -0.171        -0.424        -2.002        -0.892        -0.956
+ IH21           1.120         1.192         4.072         2.459         3.514
+ IH22          -2.360         3.486         2.698         1.617         1.769
+ IH23          -0.674        -2.524        -0.223         2.294        -1.453
+
+
+           Standardized Residuals (z-scores) for Covariances/Correlations/Residual Corr
+              IH11          IH12          IH13          IH14          IH15
+              ________      ________      ________      ________      ________
+ IH11           0.146
+ IH12           0.638         0.253
+ IH13          -1.033        -1.481       999.000
+ IH14           2.390         1.561         1.687         0.000
+ IH15           1.452         2.852        -1.640        -1.774       999.000
+ IH16          -0.972        -0.325         1.486         0.064         2.730
+ IH17          -1.215         0.372         3.326         0.510         0.730
+ IH18           4.998         5.107        -0.423         3.161         0.219
+ IH19          -0.195         2.050        -0.876         2.920         0.995
+ IH20          -0.747        -0.064         0.661         1.361        -0.190
+ IH21           2.911         1.500         1.160        -0.034        -0.930
+ IH22           1.749         2.114         2.492        -1.108         2.148
+ IH23          -0.172         2.363         2.910         2.975        -0.484
+
+
+           Standardized Residuals (z-scores) for Covariances/Correlations/Residual Corr
+              IH16          IH17          IH18          IH19          IH20
+              ________      ________      ________      ________      ________
+ IH16         999.000
+ IH17          -1.603       999.000
+ IH18          -1.851        -0.490       999.000
+ IH19           0.225        -1.870         4.053        -2.048
+ IH20          -0.886        -0.285         4.909        -0.772       999.000
+ IH21          -2.792         2.462        -1.559       999.000         1.447
+ IH22           2.346         5.552         0.686        -5.522         1.716
+ IH23          -0.584         1.323         6.799        -2.145         1.684
+
+
+           Standardized Residuals (z-scores) for Covariances/Correlations/Residual Corr
+              IH21          IH22          IH23
+              ________      ________      ________
+ IH21           0.568
+ IH22          15.701       999.000
+ IH23           4.502        -0.728       999.000
+
+
+           Normalized Residuals for Covariances/Correlations/Residual Correlations
+              IH01          IH02          IH03          IH04          IH05
+              ________      ________      ________      ________      ________
+ IH01           0.002
+ IH02           3.073         0.000
+ IH03           2.433         2.114         0.003
+ IH04           0.919         1.859         0.730        -0.003
+ IH05          -0.353        -0.492        -0.390        -0.597         0.027
+ IH06           2.115         4.235         2.319         1.145        -0.520
+ IH07          -0.342         2.837        -1.079         2.176         0.303
+ IH08          -1.801         2.127        -1.305         2.831        -2.135
+ IH09           2.341         1.180         2.241         1.058        -0.339
+ IH10          -1.456         4.321        -2.095         4.433        -1.773
+ IH11           1.945         0.269         1.166         0.249         0.857
+ IH12           1.143         1.679         1.073         1.397         0.137
+ IH13           0.706         1.877         0.257         2.283         0.145
+ IH14          -0.738         1.313        -1.668         1.541        -0.549
+ IH15           3.221         3.201         2.428         1.963        -2.501
+ IH16           2.594         2.746         0.808         0.990        -0.410
+ IH17           1.086         0.953         0.452         1.547         0.140
+ IH18           2.144         0.286         1.822         0.618         2.091
+ IH19          -0.178         1.930        -0.112         1.829        -2.179
+ IH20           1.017        -1.000         0.669        -0.242         0.863
+ IH21          -0.012         3.251         0.543         1.874         0.774
+ IH22           3.157         0.263         2.853         0.341         5.617
+ IH23           0.578        -1.856        -0.283        -0.876         1.198
+
+
+           Normalized Residuals for Covariances/Correlations/Residual Correlations
+              IH06          IH07          IH08          IH09          IH10
+              ________      ________      ________      ________      ________
+ IH06           0.003
+ IH07           0.702         0.003
+ IH08           4.828         1.471        -0.002
+ IH09           3.582         0.607         0.808         0.001
+ IH10           3.778         4.291         1.163         0.924         0.000
+ IH11           2.051        -0.191         0.416         0.083         0.916
+ IH12           3.093         0.683         0.464         0.322         0.785
+ IH13           1.049         3.214        -1.965         0.399         2.195
+ IH14           1.702        -0.540         3.566         1.661         2.954
+ IH15           2.739         0.675        -0.551         1.764        -1.330
+ IH16           2.036         2.459        -3.173        -0.762         0.129
+ IH17          -0.700         2.389        -3.178        -0.167        -0.046
+ IH18           0.794        -2.640         3.079         4.878        -4.045
+ IH19           3.001        -1.159        -0.593         1.225        -2.259
+ IH20          -0.100        -0.281        -1.495        -0.503        -0.743
+ IH21           0.749         0.923         3.448         1.821         2.955
+ IH22          -1.804         2.806         2.336         1.273         1.564
+ IH23          -0.404        -1.681        -0.170         1.265        -1.143
+
+
+           Normalized Residuals for Covariances/Correlations/Residual Correlations
+              IH11          IH12          IH13          IH14          IH15
+              ________      ________      ________      ________      ________
+ IH11           0.001
+ IH12           0.160         0.008
+ IH13          -0.842        -1.167        -0.005
+ IH14           2.128         1.376         1.020         0.000
+ IH15           1.139         2.176        -0.882        -1.094        -0.004
+ IH16          -0.789        -0.256         0.747         0.042         1.262
+ IH17          -0.941         0.282         1.529         0.324         0.374
+ IH18           4.087         4.025        -0.262         2.362         0.124
+ IH19          -0.136         1.261        -0.596         2.136         0.674
+ IH20          -0.485        -0.037         0.420         0.952        -0.121
+ IH21           2.253         1.097         0.869        -0.027        -0.687
+ IH22           1.432         1.654         2.046        -0.909         1.688
+ IH23          -0.114         1.345         1.904         2.134        -0.318
+
+
+           Normalized Residuals for Covariances/Correlations/Residual Correlations
+              IH16          IH17          IH18          IH19          IH20
+              ________      ________      ________      ________      ________
+ IH16          -0.024
+ IH17          -0.841        -0.004
+ IH18          -1.196        -0.311         0.000
+ IH19           0.152        -1.265         2.491        -0.017
+ IH20          -0.593        -0.178         2.859        -0.240         0.000
+ IH21          -1.997         1.843        -1.123        -1.506         0.579
+ IH22           1.870         4.486         0.545        -1.408         0.666
+ IH23          -0.387         0.817         4.142        -0.907         0.518
+
+
+           Normalized Residuals for Covariances/Correlations/Residual Correlations
+              IH21          IH22          IH23
+              ________      ________      ________
+ IH21           0.068
+ IH22           3.224        -0.011
+ IH23           2.099        -0.295         0.003
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index    20.000
+
+                            M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+BY Statements
+
+MODESTY  BY IH22           28.789    -0.522     -0.522       -0.312
+VANITY   BY IH18           42.500     0.370      0.370        0.235
+RESILIEN BY IH18           39.263     0.556      0.556        0.354
+BOREDOM  BY IH01           48.037     0.833      0.833        0.599
+BOREDOM  BY IH02           20.366     0.491      0.491        0.401
+BOREDOM  BY IH22           28.215     0.490      0.490        0.292
+
+WITH Statements
+
+IH02     WITH IH01         49.605     0.281      0.281        0.310
+IH03     WITH IH01         45.035     0.302      0.302        0.301
+IH03     WITH IH02         22.904     0.198      0.198        0.204
+IH04     WITH IH02         28.713     0.196      0.196        0.234
+IH06     WITH IH01         23.132     0.194      0.194        0.208
+IH06     WITH IH02        112.640     0.395      0.395        0.441
+IH06     WITH IH03         20.917     0.192      0.192        0.193
+IH10     WITH IH07         45.115     0.520      0.520        0.271
+IH15     WITH IH01         33.001     0.294      0.294        0.243
+IH21     WITH IH02         22.911     0.203      0.203        0.194
+IH22     WITH IH05         25.252     0.225      0.225        0.200
+IH22     WITH IH21         34.233     0.370      0.370        0.240
+IH23     WITH IH21         28.879     0.277      0.277        0.244
+
+
+TECHNICAL 4 OUTPUT
+
+
+     ESTIMATES DERIVED FROM THE MODEL
+
+
+           ESTIMATED MEANS FOR THE LATENT VARIABLES
+              MODESTY       VANITY        RESILIEN      BOREDOM
+              ________      ________      ________      ________
+      1         0.000         0.000         0.000         0.000
+
+
+           ESTIMATED COVARIANCE MATRIX FOR THE LATENT VARIABLES
+              MODESTY       VANITY        RESILIEN      BOREDOM
+              ________      ________      ________      ________
+ MODESTY        1.000
+ VANITY        -0.261         1.000
+ RESILIEN      -0.726         0.465         1.000
+ BOREDOM       -0.838         0.156         0.688         1.000
+
+
+           ESTIMATED CORRELATION MATRIX FOR THE LATENT VARIABLES
+              MODESTY       VANITY        RESILIEN      BOREDOM
+              ________      ________      ________      ________
+ MODESTY        1.000
+ VANITY        -0.261         1.000
+ RESILIEN      -0.726         0.465         1.000
+ BOREDOM       -0.838         0.156         0.688         1.000
+
+
+     Beginning Time:  12:15:49
+        Ending Time:  12:15:55
+       Elapsed Time:  00:00:06
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2012 Muthen & Muthen

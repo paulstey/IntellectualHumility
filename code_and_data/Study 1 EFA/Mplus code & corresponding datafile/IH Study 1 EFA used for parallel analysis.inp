@@ -1,0 +1,15 @@
+TITLE: IH EFA
+
+DATA: FILE IS "C:/Users/Kathryn/Dropbox/
+Documents/Intellectual Humility/IH MPlus Study1.csv";
+
+VARIABLE: NAMES ARE ih1-ih52;
+MISSING ARE ALL (999);
+
+USEVARIABLES ARE ih8-ih52;
+
+ANALYSIS: TYPE=EFA 1 8;
+PARALLEL=50;
+
+PLOT:
+TYPE=PLOT1 PLOT2 PLOT3;

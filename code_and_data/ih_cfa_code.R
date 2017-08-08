@@ -8,6 +8,7 @@
 library(lavaan)
 library(ltm)
 library(QuantPsyc)
+library(psych)
 
 
 ## set working directory
@@ -42,11 +43,15 @@ rev_score <- function(dat, vars) {
 
 ## specify items to be recoded
 rc_vars <- which(item_info[, 3] == "rev")
+rc_vars <- c(rc_vars, c(8, 10, 11, 13, 15, 32, 18, 24, 25, 26, 29, 31))
 
 
 dset <- rev_score(d_raw[, 1:52], rc_vars)           # reverse required items
 colnames(dset)[1:52] <- item_info[, 1]              # rename items with useful labels
 dset <- cbind(dset, d_raw[, 53:60])                 # add demographic variables
+
+
+
 
 
 
@@ -71,7 +76,6 @@ modindices(fit1)
 
 
 ## check multivariate normality
-library(psych)
 
 ## shows multivariate kurtosis of 69.82, so we use robust SEs above
 mardia(dset[, 1:52])  
@@ -257,10 +261,10 @@ modindices(fit0)
 
 
 ## specify indices for subscales
-modest_indcs <- c(27, 34, 51, 45, 50, 35)
-vanity_indcs <- c(8, 10, 11, 13, 15, 32)
+openmind_indcs <- c(27, 34, 51, 45, 50, 35)
+modesty_indcs <- c(8, 10, 11, 13, 15, 32)
 corrig_indcs <- c(37, 38, 39, 40, 43)
-bored_indcs <- c(18, 24, 25, 26, 29, 31)
+engagement_indcs <- c(18, 24, 25, 26, 29, 31)
 
 
 
@@ -270,7 +274,7 @@ bored_indcs <- c(18, 24, 25, 26, 29, 31)
 ###
 
 ## modesty sub-scale
-m1 <- grm(dset[, modest_indcs], IRT.param = TRUE, Hessian = TRUE)
+m1 <- grm(dset[, openmind_indcs], IRT.param = TRUE, Hessian = TRUE)
 
 summary(m1)
 
@@ -280,7 +284,7 @@ plot(m1, type = "IIC")
 
 
 ## vanity sub-scale
-m2 <- grm(dset[, vanity_indcs], IRT.param = TRUE, Hessian = TRUE)
+m2 <- grm(dset[, modesty_indcs], IRT.param = TRUE, Hessian = TRUE)
 
 summary(m2)
 plot(m2, type = "IIC")
@@ -299,7 +303,7 @@ plot(m3, type = "IIC")
 
 
 ## boredom sub-scale
-m4 <- grm(dset[, bored_indcs], IRT.param = TRUE, Hessian = TRUE)
+m4 <- grm(dset[, engagement_indcs], IRT.param = TRUE, Hessian = TRUE)
 
 summary(m4)
 
@@ -339,45 +343,67 @@ clean_output <- function(grm_model) {
     return(result)
 }
 
-modest_tbl <- clean_output(m1)
-vanity_tbl <- clean_output(m2)
+openmind_tbl <- clean_output(m1)
+modesty_tbl <- clean_output(m2)
 corrig_tbl <- clean_output(m3)
-bored_tbl <- clean_output(m4)
+engagement_tbl <- clean_output(m4)
 
 
 write.csv(corrig_tbl, '~/Desktop/corrig_tbl.csv')
 
 
 # Make pretty plots
+tiff('~/Desktop/openmindedness_subscale.tiff', width = 5.2, height = 4, units = 'in', res = 600, compression = "lzw")
 
-plot(m1, type = 'IIC', xlab = expression(theta), cex = 1.5, cex.main = 1, cex.lab = 1.5, cex.axis = 1.5, main = 'Modesty Items', labels = c('27', '34', '51', '45', '50', '35'))
-plot(m2, type = 'IIC', xlab = expression(theta), main = 'Vanity Items', labels = c('8', '10', '11', '13', '15', '32'))
+plot(m1, type = 'IIC', xlab = expression(theta), cex = 1, cex.main = 1, cex.lab = 1, cex.axis = 1, main = 'Openmindedness Items', labels = c('27', '34', '51', '45', '50', '35'))
 
-## neuroticism sub-scale
+dev.off()
+
+tiff('~/Desktop/modesty_subscale.tiff', width = 5.2, height = 4, units = 'in', res = 600, compression = "lzw")
+
+plot(m2, type = 'IIC', xlab = expression(theta), main = 'Intellectual Modesty Items', labels = c('8', '10', '11', '13', '15', '32'))
+
+dev.off() 
+
+
+## corrigibility sub-scale
+tiff('~/Desktop/corrigibility_subscale.tiff', width = 5.2, height = 4, units = 'in', res = 600, compression = "lzw")
+
 plot(m3, type = 'IIC', xlab = expression(theta), main = 'Corrigibility Items', labels = c('37', '38', '39', '40', '43'))
+
+dev.off()
+
 
 ## histogram of item 38
 hist(dset[, 38], breaks = c(0, 1, 2, 3, 4, 5, 6, 7), col = "skyblue", border = "lightblue", xlab = "Response Category", main = "Distribution of Item 38")
 
-## boredom sub-scale
-plot(m4, type = 'IIC', xlab = expression(theta), main = 'Boredom Sub-scale', labels = c('18', '24', '25', '26', '29', '31'))
+## engagement sub-scale
+tiff('~/Desktop/engagement_subscale.tiff', width = 5.2, height = 4, units = 'in', res = 600, compression = "lzw")
+
+plot(m4, type = 'IIC', xlab = expression(theta), main = 'Engagement Sub-scale', labels = c('18', '24', '25', '26', '29', '31'))
+
+dev.off()
+
 
 hist(dset[, 24], breaks = c(0, 1, 2, 3, 4, 5, 6, 7), col = "skyblue", border = "lightblue", xlab = "Response Category", main = "Item 24")
 hist(dset[, 29], breaks = c(0, 1, 2, 3, 4, 5, 6, 7), col = "skyblue", border = "lightblue", xlab = "Response Category", main = "Item 29", ylab = "")
 
 ## Plot all sub-scales in 1
-par (mfrow = c(2, 2), mai = c(0.8, 0.9, 0.3, 0.2))
+tiff('~/Desktop/all_subscales.tiff', width = 5.2, height = 4, units = 'in', res = 600, compression = "lzw")
 
-plot(m1, items = 0, type = 'IIC', xlab = expression(theta), cex.main = 1.5, cex.lab = 1.3, main = 'Modesty', lwd = 2, col = 'blue')
-plot(m2, items = 0, type = 'IIC', xlab = expression(theta), cex.main = 1.5, cex.lab = 1.3, main = 'Vanity', lwd = 2, col = 'blue')
-plot(m3, items = 0, type = 'IIC', xlab = expression(theta), cex.main = 1.5, cex.lab = 1.3, main = 'Neuroticism', lwd = 2, col = 'blue')
-plot(m4, items = 0, type = 'IIC', xlab = expression(theta), cex.main = 1.5, cex.lab = 1.3, main = 'Boredom', lwd = 2, col = 'blue')
+par(mfrow = c(2, 2), mai = c(0.8, 0.9, 0.3, 0.2))
+
+plot(m1, items = 0, type = 'IIC', xlab = expression(theta), cex.main = 1, cex.lab = 1, main = 'Openmindedness', lwd = 2, col = 'blue')
+plot(m2, items = 0, type = 'IIC', xlab = expression(theta), cex.main = 1, cex.lab = 1, main = 'Intellectual Modesty', lwd = 2, col = 'blue')
+plot(m3, items = 0, type = 'IIC', xlab = expression(theta), cex.main = 1, cex.lab = 1, main = 'Corrigibility', lwd = 2, col = 'blue')
+plot(m4, items = 0, type = 'IIC', xlab = expression(theta), cex.main = 1, cex.lab = 1, main = 'Engagement', lwd = 2, col = 'blue')
+
+dev.off()
 
 
-png('~/Desktop/ih_subscale.png', width = 6, height = 4, units = 'in', res = 300, cex = 1)
 
 # exporting a given plot to .png
-png('~/Desktop/ih_subscale.png', width = 6, height = 4, units = 'in', res = 300)
+png('~/Desktop/ih_subscale.png', width = 5.2, height = 4, units = 'in', res = 600)
 par (mai = c(0.8, 0.9, 0.3, 0.2))
 
 plot(m4, type = 'IIC', xlab = expression(theta), main = 'Boredom Items', labels = c('18', '24', '25', '26', '29', '31'))
